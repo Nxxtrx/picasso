@@ -3,7 +3,9 @@ import PostDetails from 'widgets/postDetails'
 
 const Post = () => {
   return (
-    <PostDetails />
+    <section className='post'>
+      <PostDetails />
+    </section>
   )
 }
 

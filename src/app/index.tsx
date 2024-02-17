@@ -1,11 +1,12 @@
 import React from 'react';
 import './styles/index.css';
-import Posts from 'pages/posts/ui/Posts';
+import './styles/normalize.css'
+import AppRouter from './router/AppRouter';
 
 const App = () => {
   return (
     <div className='App'>
-      <Posts />
+      <AppRouter />
     </div>
   )
 }

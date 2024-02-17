@@ -12,12 +12,17 @@ export const postApi = createApi({
         return endpointName;
       },
       merge: (currentCache, newItems) => {
-        console.log(currentCache)
-        currentCache.push(...newItems);
+        return [...currentCache, ...newItems];
       },
       forceRefetch({ currentArg, previousArg }) {
         return currentArg !== previousArg;
       }
+    }),
+    getPostById: builder.query<PostType, number> ({
+      query: (postId) => `/posts/${postId}`
+    }),
+    getFullPosts: builder.query<PostType[], void> ({
+      query: () => `/posts`
     })
   })
 });

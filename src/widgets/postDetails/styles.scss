@@ -1,0 +1,33 @@
+.post-details__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #b1b1b1;
+}
+
+.post-details__text{
+  border-radius: 20px;
+  border: 1px solid #000;
+  max-width: 800px;
+  min-height: 300px;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.post-details__description{
+  margin-top: 50px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.post-details__button{
+  margin: 0;
+}
+
+.post-details__loader{
+  display: block;
+  width: 800px;
+  text-align: center;
+}
