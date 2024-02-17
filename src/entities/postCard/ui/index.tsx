@@ -1,4 +1,4 @@
-import React, {FC, MouseEventHandler, ReactNode } from 'react'
+import {FC, MouseEventHandler} from 'react'
 import Button from 'shared/ui/button'
 import { capitalizeFirstLetter } from 'shared/lib/capitalizeFirstLetter'
 import './styles.scss'
@@ -9,8 +9,6 @@ interface PostProps {
   description: string,
   handleClick: MouseEventHandler<HTMLButtonElement>
 }
-
-
 
 const PostCard: FC<PostProps> = ({id, title, description, handleClick}) => {
   return (

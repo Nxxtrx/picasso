@@ -1,8 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router'
-import Post from 'pages'
-import Posts from 'pages/posts/ui/Posts'
-
-
+import Post from 'pages/post/ui'
+import Posts from 'pages/posts/ui'
 
 const AppRouter = () => {
   return (

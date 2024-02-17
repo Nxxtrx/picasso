@@ -8,14 +8,13 @@ import Loader from 'shared/ui/loader';
 
 
 const PostsList: FC = () => {
-  const location = useLocation()
   const navigate = useNavigate()
 
 
   const savedPage = localStorage.getItem('currentPage');
   const [page, setPage] = useState<number>(savedPage !== null ? parseInt(savedPage) : 0);
 
-  const {data, isLoading, isFetching} = postApi.useGetPostsQuery(page)
+  const {data, isFetching} = postApi.useGetPostsQuery(page)
   const {data: postsList} = postApi.useGetFullPostsQuery()
 
   useEffect(() => {
@@ -43,14 +42,14 @@ const PostsList: FC = () => {
     navigate(`/posts/${id}`)
   }
 
-  window.onbeforeunload = (event) => {
+  window.onbeforeunload = () => {
     localStorage.setItem('currentPage', "0")
   };
 
   return (
     <div className='posts__container'>
       <ul className='posts__list'>
-        {data && data.map((post, index) => 
+        {data && data.map((post) => 
           <PostCard key={post.id} id={post.id} title={post.title} description={post.body} handleClick={() => handleClickBtn(post.id)}/>
         )}
         {isFetching && <Loader text={'Идет загрузка...'}/>}

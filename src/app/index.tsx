@@ -1,7 +1,5 @@
-import React from 'react';
-import './styles/index.css';
-import './styles/normalize.css'
 import AppRouter from './router/AppRouter';
+import './styles/normalize.css'
 
 const App = () => {
   return (
